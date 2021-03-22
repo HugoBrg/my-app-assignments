@@ -1,0 +1,43 @@
+<h1>assignments-add</h1>
+<mat-vertical-stepper linear="false" #stepper>
+    <mat-step>
+        <ng-template matStepLabel>Quelle est la matière de votre devoir</ng-template>
+        <mat-form-field>
+            <mat-label>Matiere : </mat-label>
+            <mat-label>Français</mat-label>
+            <input [formControl]="etatF" id = "etatF" type="checkbox" [(ngModel)]="etatFB">
+            <mat-label>Mathématiques</mat-label>
+            <input [formControl]="etatM" id = "etatM" type="checkbox" [(ngModel)]="etatMB">
+        </mat-form-field>
+        <div>
+            <button mat-button matStepperNext>Next</button>
+        </div>    
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Déposez vous un brouillon ou un rendue définitif</ng-template>
+        <mat-form-field>
+            <mat-label>Rendu definitif : </mat-label>
+            <input [formControl]="etat" id = "etat" type="checkbox">
+        </mat-form-field>
+        <div>
+            <button mat-button matStepperNext>Next</button>
+        </div>    
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Remarque au professeur</ng-template>
+        <mat-form-field>
+            <mat-label>Remarque : </mat-label>
+            <input matInput [formControl]="remarque" placeholder="remarque" required>
+        </mat-form-field>
+        <div>
+            <button mat-button matStepperNext>Next</button>
+        </div>    
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Valider votre rendu</ng-template>
+        <div>
+            <button (click)="submit()">Submit</button>
+        </div>    
+    </mat-step>
+</mat-vertical-stepper>
+<p>{{message}}</p>

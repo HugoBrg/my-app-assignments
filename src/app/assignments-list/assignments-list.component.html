@@ -1,0 +1,41 @@
+<h1>assignments-list</h1>
+<h2>Non-rendu</h2>
+<ul class="assignments">
+    <li *ngFor="let assignment of assignmentsNonRendu" (click)="onSelect(assignment)" [class.selected]="assignment === selectedAssignment">
+      <span class="badge">{{assignment.id}}</span> Auteur : {{assignment.auteur}} | Rendu : {{assignment.etat}} | Note : {{assignment.note}}
+    </li>
+</ul>
+
+<h2>Rendu</h2>
+<ul class="assignments">
+    <li *ngFor="let assignment of assignmentsRendu" (click)="onSelect(assignment)" [class.selected]="assignment === selectedAssignment">
+      <span class="badge">{{assignment.id}}</span> Auteur : {{assignment.auteur}} | Rendu : {{assignment.etat}} | Note : {{assignment.note}}
+    </li>
+</ul>
+
+<div *ngIf="selectedAssignment">
+    <h2>Eleve : {{selectedAssignment.auteur | uppercase}} -  Details 
+        <img id="assignment-image" src={{selectedAssignment.image}} width="50" height="50"/>
+        <img id="assignment-prof" src={{selectedAssignment.prof}} width="50" height="50"/>
+    </h2>
+    <div><span>Id: </span>{{selectedAssignment.id}}</div>
+    <div>
+        <label for="assignment-matiere">Matiere : </label>
+        {{selectedAssignment.matiere}}
+        <br>
+        <label for="assignment-etat">Rendu : </label>
+        <input [formControl]="etat" id = "etat" type="checkbox" [(ngModel)]="selectedAssignment.etat">
+        <br>
+        <label for="assignment-note">Note : {{selectedAssignment.note}}</label>
+        <br>
+        <input [formControl]="note"  type="range" id="assignment-note"  min="0" max="20" [(ngModel)]="selectedAssignment.note">
+        <br>
+        <label for="assignment-remarque">Remarque : </label>
+        <input id="assignment-remarque" [(ngModel)]="selectedAssignment.remarque">
+      </div>
+</div>
+<br>
+<br>
+<br>
+
+<button type="button" (click)="add()">Add an assignment</button>

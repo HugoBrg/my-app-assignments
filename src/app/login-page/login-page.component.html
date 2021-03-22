@@ -1,0 +1,12 @@
+<h1>login-page</h1>
+
+<label for="login">login : </label>
+<input type="text" id="login" name="login" required size="10" [formControl]="login">
+<br>
+
+<label for="pass">password : </label>
+<input type="text" id="pass" name="pass" required size="10" input type="password" [formControl]="pass">
+<br>
+
+<button type="button" (click)="signIn()">Sign-in</button>
+

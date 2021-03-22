@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "login":"hugo",
+        "pass": "1234",
+        "status": "user"
+    },
+    {
+        "id": 2,
+        "login":"remi",
+        "pass": "4567",
+        "status": "user"
+    },
+    {
+        "id": 3,
+        "login":"thomas",
+        "pass": "4321",
+        "status": "user"
+    },
+    {
+        "id": 4,
+        "login":"admin",
+        "pass": "admin",
+        "status": "admin"
+    }
+]

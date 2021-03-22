@@ -1,27 +1,44 @@
-# MyApp
+# MyApp - Assignments
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.7.
+## Lancement
+A la racine : <p>
+```node mongo.js ``` <p>
+Puis : <p>
+```ng serve --proxy-config proxy.conf.json```
 
-## Development server
+## Features
+- Identification (user ou admin)
+- Liste des devoir rendu et non rendu
+- Detail des devoirs (note, remarques, ect..)
+- Images (Professeur et matière)
+- Ajout de devoirs (avec contrainte)
+- Changement d'état (rendu/non-rendu) si notation
+- Barre de navigation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Technos
+- Node
+- Express
+- MongoDB
+- Cors
 
-## Code scaffolding
+## Modules (non-exhaustif)
+- HttpClient
+- HttpParams
+- FormControl
+- Router
+- MatStepper
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Demo
+https://www.youtube.com/watch?v=eYQdWgQ6jJM
 
-## Build
+## Difficultés
+- Connection à la base de données (node).
+- Je n'ai pas réussi à reprendr ele projet de base suis reparti de 0.
+- Envoie de données entre components
+- Paramtrages du stepper
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Contact
+Si vous rencontre des problèmes au lancement contactez moi : 
+- hugo.brg@outlook.com
+- hugo.beranger@etu.unice.fr
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
